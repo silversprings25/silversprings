@@ -8,9 +8,13 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <nav class="container nav">
-      <h1 class="logo">Silver Springs Pool Care</h1>
+      <h1 class="logo">
+        <img src="images/logo.png" alt="Silver Springs Pool Care Logo">
+        Silver Springs Pool Care
+      </h1>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -19,17 +23,31 @@
     </nav>
   </header>
 
-  <section class="container contact">
-    <h2>Contact us / Request a Free Quote</h2>
-    <form action="#" method="POST" class="quote-form">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="phone" placeholder="Phone">
-      <textarea name="message" rows="4" placeholder="Tell us how we can help"></textarea>
-      <button type="submit" class="cta-btn">✨ Request a Quote</button>
-    </form>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero" style="background: url('images/pool-hero.jpg') center/cover no-repeat;">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p class="slogan">We’d love to hear from you</p>
+      </div>
+    </section>
 
+    <!-- Contact Form -->
+    <section class="container contact">
+      <h2>Contact Us / Request a Free Quote</h2>
+      <p class="form-intro">Fill out the form below and we’ll get back to you as soon as possible.</p>
+      <form action="#" method="POST" class="quote-form">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone">
+        <textarea name="message" rows="4" placeholder="Tell us how we can help"></textarea>
+        <button type="submit" class="cta-btn">✨ Request a Quote</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer>
     <p>© 2025 Silver Springs Pool Care | Phoenix, AZ</p>
   </footer>
