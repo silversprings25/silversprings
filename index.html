@@ -5,13 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Silver Springs Pool Care</title>
   <link rel="stylesheet" href="style.css?v=1.0">
+  <style>
+    /* Flexbox page layout */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1; /* pushes footer down */
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
     <nav class="container nav">
-      <h1 class="logo">Silver Springs Pool Care</h1>
+      <h1 class="logo">
+        <img src="images/logo.png" alt="Silver Springs Pool Care Logo">
+        Silver Springs Pool Care
+      </h1>
       <ul>
         <li><a href="about.html">About</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
@@ -20,59 +38,66 @@
     </nav>
   </header>
 
+  <!-- Main Content -->
+  <main>
 
-  <!-- Intro Section with Image -->
-  <section class="container intro-grid">
-    <div class="intro-text">
-      <h2>Enjoy your pool again!</h2>
-      <p>
-        Owning a pool can be a lot of work, especially when it comes to maintenance.  
-        You need to keep the water clean and clear, test the chemicals regularly,  
-        and remove any debris.
-      </p>
-      <p>
-        This can be time-consuming and labor-intensive, especially if you don't have  
-        the time or expertise.
-      </p>
-      <p>
-        That's where we at <strong>Silver Springs Pool Care</strong> can help. We take care of all  
-        your pool maintenance needs so you can relax and enjoy your pool without  
-        worry. We'll test the water, add chemicals, clean the filter, and remove debris.
-      </p>
-    </div>
-    <div class="intro-img">
-      <img src="images/pool4.png" alt="Relaxing by the pool">
-    </div>
-  </section>
-
-
-
-  <!-- Services -->
-  <section id="services" class="container">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>Weekly Cleaning</h3>
-        <p>Keep your pool sparkling clean with our reliable weekly service.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        
+        <h2>Silver Springs Pool Care</h2>
+        <p class="slogan">Oasis Perfected</p>
+        <a href="contact.html" class="cta-btn">✨ Request a Free Quote</a>
       </div>
-      <div class="service-card">
-        <h3>Equipment Installation</h3>
-        <p>New filters, pumps, or heaters installed by certified technicians.</p>
-      </div>
-      <div class="service-card">
-        <h3>Repair Services</h3>
-        <p>From leaks to broken pumps, we'll get your pool back in shape.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-      <!--Request a Quote button 
-  <section class="hero">
-    <div class="container">
-      <a href="contact.html" class="cta-btn">✨ Request a Quote</a>
-    </div>
-  </section>
--->
+    <!-- Intro Section with Image -->
+    <section class="container intro-grid">
+      <div class="intro-text">
+        <h2>Enjoy your pool again!</h2>
+        <p>
+          Owning a pool can be a lot of work, especially when it comes to maintenance.  
+          You need to keep the water clean and clear, test the chemicals regularly,  
+          and remove any debris.
+        </p>
+        <p>
+          This can be time-consuming and labor-intensive, especially if you don't have  
+          the time or expertise.
+        </p>
+        <p>
+          That's where we at <strong>Silver Springs Pool Care</strong> can help. We take care of all  
+          your pool maintenance needs so you can relax and enjoy your pool without  
+          worry. We'll test the water, add chemicals, clean the filter, and remove debris.
+        </p>
+      </div>
+      <div class="intro-img">
+        <img src="images/pool4.png" alt="Relaxing by the pool">
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="container">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service-card">
+          <img src="images/service-cleaning.jpg" alt="Weekly Pool Cleaning">
+          <h3>Weekly Cleaning</h3>
+          <p>Keep your pool sparkling clean with our reliable weekly service.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/service-install.jpg" alt="Pool Equipment Installation">
+          <h3>Equipment Installation</h3>
+          <p>New filters, pumps, or heaters installed by certified technicians.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/service-repair.jpg" alt="Pool Repair Services">
+          <h3>Repair Services</h3>
+          <p>From leaks to broken pumps, we'll get your pool back in shape.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <!-- Footer -->
   <footer>
     <p>© 2025 Silver Springs Pool Care | Phoenix, AZ</p>
