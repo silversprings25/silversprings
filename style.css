@@ -1,8 +1,24 @@
-/* Global Styles */
+/* =======================
+   Flexbox Page Layout
+======================= */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* pushes footer down */
+  display: flex;
+  flex-direction: column;
+}
+
+/* =======================
+   Global Styles
+======================= */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   line-height: 1.6;
   color: #333;
   background: #f9f9f9;
@@ -14,7 +30,13 @@ body {
   margin: 0 auto;
 }
 
-/* Header */
+* {
+  box-sizing: border-box;
+}
+
+/* =======================
+   Header
+======================= */
 header {
   background: #004aad;
   color: #fff;
@@ -25,10 +47,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  font-weight: bold;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
 }
 
 .nav ul {
@@ -41,27 +72,64 @@ header {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Hero */
+/* Mobile nav: stack links vertically */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+}
+
+/* =======================
+   Hero
+======================= */
 .hero {
-  background: url('images/pool-hero.jpg') center/cover no-repeat;
+  position: relative;
+  background: url('images/pool-hero.png') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 6rem 1rem;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-logo {
+  height: 80px;
   margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.2rem;
+.hero h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.slogan {
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+  color: #eed3a1; /* warm beige inspired by logo */
   margin-bottom: 2rem;
 }
 
@@ -69,11 +137,12 @@ header {
   display: inline-block;
   background: #1976d2;
   color: white;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease, transform 0.2s ease;
+  font-size: clamp(1rem, 3vw, 1.1rem);
 }
 
 .cta-btn:hover {
@@ -81,7 +150,9 @@ header {
   transform: translateY(-2px);
 }
 
-/* Intro Section (single column legacy) */
+/* =======================
+   Intro Section
+======================= */
 .intro {
   margin: 4rem auto;
   max-width: 800px;
@@ -91,10 +162,9 @@ header {
 .intro h2 {
   color: #004aad;
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
-/* Intro Section with Image Grid */
 .intro-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -105,6 +175,7 @@ header {
 
 .intro-text {
   line-height: 1.7;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 .intro-img img {
@@ -117,7 +188,6 @@ header {
   margin: 0 auto;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .intro-grid {
     grid-template-columns: 1fr;
@@ -125,37 +195,67 @@ header {
   }
 }
 
-/* Services */
+/* =======================
+   Services
+======================= */
 #services {
   margin: 4rem auto;
 }
 
+#services h2 {
+  text-align: center;
+  color: #004aad;
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+}
+
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .service-card {
   background: white;
-  padding: 2rem;
-  border-radius: 8px;
+  padding: 1.5rem;
+  border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  color: #004aad;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+}
+
+.service-card p {
+  font-size: clamp(1rem, 2.5vw, 1.05rem);
+  color: #555;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact Section */
+/* =======================
+   Contact Section
+======================= */
 .contact {
   margin: 4rem auto;
   max-width: 700px;
   background: #fff;
-  padding: 2.5rem;
-  border-radius: 12px; /* card container */
+  padding: 2rem 3rem;
+  border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -163,12 +263,14 @@ header {
   text-align: center;
   margin-bottom: 1rem;
   color: #004aad;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .form-intro {
   text-align: center;
   margin-bottom: 2rem;
   color: #555;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 .quote-form {
@@ -180,10 +282,13 @@ header {
 .quote-form input,
 .quote-form textarea {
   width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   border: 1px solid #ccc;
-  border-radius: 8px; /* beveled look */
+  border-radius: 8px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -203,16 +308,28 @@ header {
 .quote-form button {
   width: 100%;
   padding: 1rem;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
   border: none;
   cursor: pointer;
+  border-radius: 8px;
+  background: #1976d2;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Footer */
+.quote-form button:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+/* =======================
+   Footer
+======================= */
 footer {
   background: #004aad;
   color: white;
   text-align: center;
   padding: 1rem 0;
-  margin-top: 3rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
