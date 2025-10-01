@@ -53,14 +53,21 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  font-size: clamp(1.2rem, 4vw, 1.8rem);
-  font-weight: bold;
+  gap: 10px; /* space between logo and text */
+  margin: 0;
 }
 
 .logo img {
-  height: 50px;
-  margin-right: 10px;
+  height: clamp(30px, 4vw, 50px); /* responsive size */
+  width: auto;
 }
+
+.logo span {
+  font-size: clamp(1rem, 3vw, 1.5rem); /* scales nicely */
+  font-weight: bold;
+  color: #fff; /* ensures text is visible on dark header */
+}
+
 
 .nav ul {
   list-style: none;
