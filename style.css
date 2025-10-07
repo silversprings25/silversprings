@@ -1,6 +1,4 @@
-/* =======================
-   Flexbox Page Layout
-======================= */
+/* ======================= Flexbox Page Layout ======================= */
 html, body {
   height: 100%;
   margin: 0;
@@ -14,9 +12,7 @@ main {
   flex-direction: column;
 }
 
-/* =======================
-   Global Styles
-======================= */
+/* ======================= Global Styles ======================= */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -34,9 +30,7 @@ body {
   box-sizing: border-box;
 }
 
-/* =======================
-   Header
-======================= */
+/* ======================= Header ======================= */
 header {
   background: #004aad;
   color: #fff;
@@ -67,7 +61,6 @@ header {
   font-weight: bold;
   color: #fff; /* ensures text is visible on dark header */
 }
-
 
 .nav ul {
   list-style: none;
@@ -101,9 +94,7 @@ header {
   }
 }
 
-/* =======================
-   Hero
-======================= */
+/* ======================= Hero ======================= */
 .hero {
   position: relative;
   background: url('images/pool-hero.png') center/cover no-repeat;
@@ -157,9 +148,7 @@ header {
   transform: translateY(-2px);
 }
 
-/* =======================
-   Intro Section
-======================= */
+/* ======================= Intro Section ======================= */
 .intro {
   margin: 4rem auto;
   max-width: 800px;
@@ -202,9 +191,7 @@ header {
   }
 }
 
-/* =======================
-   Services
-======================= */
+/* ======================= Services ======================= */
 #services {
   margin: 4rem auto;
 }
@@ -254,9 +241,7 @@ header {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* =======================
-   Contact Section
-======================= */
+/* ======================= Contact Section ======================= */
 .contact {
   margin: 4rem auto;
   max-width: 700px;
@@ -330,9 +315,7 @@ header {
   transform: translateY(-2px);
 }
 
-/* =======================
-   Footer
-======================= */
+/* ======================= Footer ======================= */
 footer {
   background: #004aad;
   color: white;
