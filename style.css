@@ -323,3 +323,98 @@ footer {
   padding: 1rem 0;
   font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
+
+
+/* =======================
+   Services Page (services.html)
+======================= */
+
+/* Page hero text sizing if you use .page-hero + .lead */
+.page-hero .lead {
+  max-width: 900px;
+  margin: 0.75rem auto 0;
+}
+
+/* Group spacing between service sections */
+.service-section {
+  margin: 3rem auto;
+}
+
+/* Services page grid/cards */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.service-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+
+  /* helps alignment consistency */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Make headings consistent and centered */
+.service-box h3 {
+  color: #004aad;
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+  text-align: center;
+}
+
+/* Paragraph text in cards */
+.service-box p {
+  font-size: clamp(1rem, 2.5vw, 1.05rem);
+  color: #555;
+  margin: 0;
+  max-width: 40ch; /* keeps centered text from being too wide */
+}
+
+/* Lists are the usual culprit: defaults push them left */
+.service-box ul {
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  list-style: disc;
+  list-style-position: inside;
+
+  /* keep list readable but centered as a block */
+  text-align: left;
+  max-width: 34ch;
+}
+
+/* Fix default spacing for list items */
+.service-box li {
+  margin: 0.25rem 0;
+}
+
+/* Hover effect to match homepage cards */
+.service-box:hover {
+  transform: translateY(-6px);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Service areas list (if used) */
+.service-areas {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.service-areas li {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  text-align: center;
+}
