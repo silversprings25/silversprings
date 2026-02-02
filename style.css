@@ -418,3 +418,30 @@ footer {
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
   text-align: center;
 }
+
+
+/* Logo + ownership wrapper */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Veteran / family badge */
+.ownership-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #eed3a1; /* matches your gold accent */
+  white-space: nowrap;
+}
+
+/* Hide badge on small screens to keep header clean */
+@media (max-width: 768px) {
+  .ownership-badge {
+    display: none;
+  }
+}
