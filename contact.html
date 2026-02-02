@@ -11,10 +11,18 @@
   <!-- Header -->
   <header>
     <nav class="container nav">
-      <h1 class="logo">
-        <img src="images/logo.png" alt="Silver Springs Pool Care Logo">
-        Silver Springs Pool Care
-      </h1>
+<div class="logo-wrapper">
+  <div class="ownership-badge" aria-hidden="true">
+    <span>Veteran-Owned</span>
+    <span>Family-Operated</span>
+  </div>
+
+  <h1 class="logo">
+    <img src="images/logo.png" alt="Silver Springs Pool Care Logo">
+    <span>Silver Springs Pool Care</span>
+  </h1>
+</div>
+
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -28,7 +36,6 @@
   <!-- Main Content -->
   <main>
     <!-- Hero Banner -->
-
     <section class="hero">
       <div class="container">
         <h2>Contact Us</h2>
@@ -52,7 +59,10 @@
         <input type="hidden" name="_subject" value="New Quote Request from Website">
         <input type="hidden" name="_next" value="thanks.html">
 
-
+        <!-- Honeypot field (spam protection) -->
+        <div class="hp-field" aria-hidden="true">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
 
         <button type="submit" class="cta-btn">✨ Request a Quote</button>
       </form>
