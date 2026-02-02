@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Title (what shows in Google results) -->
   <title>Pool Cleaning & Pool Service in Mesa & Gilbert AZ | Silver Springs Pool Care</title>
-  <link rel="stylesheet" href="style.css?v=1.0" />
+
+  <!-- SEO Meta Description (helps clicks + relevance) -->
+  <meta name="description" content="Silver Springs Pool Care provides weekly pool cleaning, chemical balancing, and pool repair services in Mesa, Gilbert, and the East Valley including Tempe, Scottsdale, Ahwatukee, Fountain Hills, Queen Creek, and San Tan Valley, Arizona. Request a free quote today.">
+
+  <link rel="stylesheet" href="style.css?v=1.0">
+
   <style>
     /* Flexbox page layout */
     html, body {
@@ -13,25 +20,42 @@
       display: flex;
       flex-direction: column;
     }
+
     main {
       flex: 1; /* pushes footer down */
       display: flex;
       flex-direction: column;
     }
+
+    /* Optional: simple list styling if you don't already have it in style.css */
+    .service-areas {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+    .service-areas li {
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
   <header>
     <nav class="container nav">
-      <h1 class="logo">
-        <img src="images/logo.png" alt="Silver Springs Pool Care Logo" />
+      <div class="logo" aria-label="Silver Springs Pool Care">
+        <img src="images/logo.png" alt="Silver Springs Pool Care Logo">
         <span>Silver Springs Pool Care</span>
-      </h1>
+      </div>
 
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="contact.html">Contact / Request a Quote</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
@@ -45,8 +69,17 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <h2>Silver Springs Pool Care</h2>
+        <h1>Professional Pool Cleaning & Pool Service in Mesa and Gilbert, Arizona</h1>
+
+        <!-- SEO/Local relevance paragraph near the top -->
+        <p class="service-area">
+          Silver Springs Pool Care provides reliable weekly pool cleaning, pool maintenance, water chemistry balancing,
+          and pool repair services for homeowners in Mesa, Gilbert, and surrounding East Valley communities.
+        </p>
+
         <p class="slogan">Oasis Perfected</p>
+
+        <!-- Stronger anchor text for SEO -->
         <a href="contact.html" class="cta-btn">✨ Request a Free Quote</a>
       </div>
     </section>
@@ -55,23 +88,25 @@
     <section class="container intro-grid">
       <div class="intro-text">
         <h2>Enjoy your pool again!</h2>
+
         <p>
-          Owning a pool can be a lot of work, especially when it comes to maintenance.
-          You need to keep the water clean and clear, test the chemicals regularly,
-          and remove any debris.
+          Owning a pool can be a lot of work, especially when it comes to keeping the water clean, balanced, and safe.
+          Between skimming, brushing, chemical testing, and filter checks, it adds up fast.
         </p>
+
         <p>
-          This can be time-consuming and labor-intensive, especially if you don't have
-          the time or expertise.
+          If you don't have the time (or you’re tired of guessing with chemicals), we make pool ownership easy again.
         </p>
+
         <p>
-          That's where we at <strong>Silver Springs Pool Care</strong> can help. We take care of all
-          your pool maintenance needs so you can relax and enjoy your pool without
-          worry. We'll test the water, add chemicals, clean the filter, and remove debris.
+          At <strong>Silver Springs Pool Care</strong>, we provide professional <strong>weekly pool cleaning</strong>,
+          <strong>pool maintenance</strong>, and <strong>pool equipment service</strong> for residential pools in
+          <strong>Mesa</strong> and <strong>Gilbert</strong>, AZ—so you can relax and actually enjoy your pool.
         </p>
       </div>
+
       <div class="intro-img">
-        <img src="images/pool4.png" alt="Relaxing by the pool" />
+        <img src="images/pool4.png" alt="Clean residential swimming pool maintained by Silver Springs Pool Care in the East Valley, Arizona">
       </div>
     </section>
 
@@ -81,60 +116,77 @@
 
       <div class="services">
         <div class="service-card">
-          <h3>Pool Cleaning &amp; Maintenance</h3>
-          <ul class="service-points">
-            <li>Weekly and biweekly pool cleaning</li>
-            <li>Skimming, brushing, and vacuuming</li>
-            <li>Tile and surface cleaning</li>
-            <li>Skimmer and pump basket emptying</li>
-          </ul>
+          <h3>Weekly Pool Cleaning</h3>
+          <p>
+            Consistent weekly service that includes skimming, brushing, vacuuming, filter checks,
+            and water chemistry balancing to keep your pool swim-ready.
+          </p>
         </div>
 
         <div class="service-card">
-          <h3>Water Chemistry &amp; Balancing</h3>
-          <ul class="service-points">
-            <li>Precise water testing</li>
-            <li>Chemical balancing for safety and comfort</li>
-            <li>Chlorine, pH, and alkalinity adjustments</li>
-            <li>Salt system care</li>
-          </ul>
+          <h3>Pool Equipment Installation</h3>
+          <p>
+            Professional installation of pool pumps, filters, heaters, and salt systems—done right
+            for Arizona pools and high-use seasons.
+          </p>
         </div>
 
         <div class="service-card">
-          <h3>Repair and Equipment Service</h3>
-          <ul class="service-points">
-            <li>Pump and filter inspections</li>
-            <li>Equipment troubleshooting and minor repairs</li>
-            <li>Filter cleaning and replacements</li>
-            <li>Pool equipment upgrades and installations</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Green to Clean</h3>
-          <ul class="service-points">
-            <li>Full green pool recovery</li>
-            <li>Shock treatments and algae removal</li>
-            <li>Restoring water clarity and safety</li>
-          </ul>
-        </div>
-
-        <div class="service-card service-card--full">
-          <h3>Special Services</h3>
-          <ul class="service-points">
-            <li>One-time cleanings for special occasions</li>
-            <li>Vacation pool service checks</li>
-            <li>Seasonal startup and shutdown service</li>
-          </ul>
+          <h3>Pool Repair Services</h3>
+          <p>
+            Fast help for common pool issues like leaks, noisy pumps, broken filters, and equipment
+            troubleshooting to get your system running smoothly again.
+          </p>
         </div>
       </div>
+    </section>
+
+    <!-- Service Areas (helps local SEO + users) -->
+    <section class="container">
+      <h2>Pool Service Areas</h2>
+      <p>
+        We proudly serve Mesa, Gilbert, and nearby East Valley communities. Not sure if you’re in our route?
+        <a href="contact.html">Request a quote</a> and we’ll confirm.
+      </p>
+
+      <ul class="service-areas">
+        <li>Mesa, AZ</li>
+        <li>Gilbert, AZ</li>
+        <li>Tempe, AZ</li>
+        <li>Scottsdale, AZ</li>
+        <li>North Scottsdale, AZ</li>
+        <li>Ahwatukee, AZ</li>
+        <li>Fountain Hills, AZ</li>
+        <li>Queen Creek, AZ</li>
+        <li>San Tan Valley, AZ</li>
+      </ul>
+    </section>
+
+    <!-- FAQ (helps AI Overview + organic visibility) -->
+    <section class="container">
+      <h2>FAQs</h2>
+
+      <h3>Do you offer weekly pool service?</h3>
+      <p>Yes — we offer weekly pool cleaning and maintenance services designed for consistent, clear water.</p>
+
+      <h3>What does weekly pool cleaning include?</h3>
+      <p>
+        Weekly service typically includes skimming, brushing, vacuuming (as needed), checking equipment,
+        and balancing the water chemistry to keep your pool safe and swim-ready.
+      </p>
+
+      <h3>Which areas do you serve?</h3>
+      <p>
+        We serve Mesa and Gilbert, plus surrounding East Valley areas including Tempe, Scottsdale,
+        North Scottsdale, Ahwatukee, Fountain Hills, Queen Creek, and San Tan Valley.
+      </p>
     </section>
 
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Silver Springs Pool Care | Phoenix, AZ</p>
+    <p>© 2025 Silver Springs Pool Care | Pool Service in Mesa, Gilbert &amp; East Valley Arizona</p>
   </footer>
 
 </body>
